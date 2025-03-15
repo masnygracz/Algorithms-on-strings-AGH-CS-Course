@@ -2,26 +2,21 @@ def text_counter():
     # Pobieranie danych od użytkownika
     text = input("Wprowadź tekst do analizy: ")
     
-    # Obliczenia
-    # TODO: Oblicz liczbę wszystkich znaków w tekście
-    char_count = ___
+    char_count = len(text)
     
-    # TODO: Oblicz liczbę znaków bez spacji
-    char_count_no_spaces = ___
+    spaces_amnt = sum(1 for char in text if char == " ")
+    char_count_no_spaces = len(text) - spaces_amnt
     
-    # TODO: Podziel tekst na słowa i oblicz ich liczbę
-    words = ___
-    word_count = ___
+    words = text.split()
+    word_count = len(words)
     
     # Liczenie samogłosek i spółgłosek
     vowels = "aeiouAEIOUąęióóyĄĘIÓÓY"
     consonants = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZćłńśźżĆŁŃŚŹŻ"
     
-    # TODO: Zlicz samogłoski w tekście
-    vowel_count = ___
+    vowel_count = sum(1 for char in text if char in vowels)
     
-    # TODO: Zlicz spółgłoski w tekście
-    consonant_count = ___
+    consonant_count = sum(1 for char in text if char in consonants)
     
     # Wyświetlanie wyników
     print(f"\nAnaliza tekstu: \"{text}\"")
